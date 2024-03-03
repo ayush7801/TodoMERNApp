@@ -1,14 +1,18 @@
 import mongoose from "mongoose";
 import express from "express";
 import cors from 'cors';
+import dotenv from "dotenv";
 
 import { TodoModel } from "./models/Todo";
 
+dotenv.config();
+
 const app = express()
+
 app.use(cors());
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://ayushtiwari820:Krishnakant820@cluster0.smdrybk.mongodb.net/Test?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.MongoDBAPI!)
 .then((res) => {console.log("connected to cluster0...")})
 .catch((err) => {console.log(err)});
 
