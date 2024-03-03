@@ -1,0 +1,16 @@
+
+.createTask input{
+    width: 15rem;
+    padding: 10px;
+    outline: none;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+}
+
+.createTask button{
+    width: 4rem;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
